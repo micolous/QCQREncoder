@@ -24,6 +24,8 @@
 /* Begin PBXBuildFile section */
 		16BA95420A7EB2EB001E4983 /* QCQREncoderPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 16BA95410A7EB2EB001E4983 /* QCQREncoderPlugIn.m */; };
 		16BA96310A7EB9AC001E4983 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BA96300A7EB9AC001E4983 /* Quartz.framework */; };
+		4C00F89C13672AF7003683A5 /* libqrencode.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C00F89B13672AF7003683A5 /* libqrencode.3.dylib */; };
+		4C00F89E13672B27003683A5 /* libqrencode.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4C8D845A129784BC00714CDF /* libqrencode.dylib */; };
 		4C8D84941297B34300714CDF /* QRImageOutputProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D846A1297870400714CDF /* QRImageOutputProvider.m */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -38,12 +40,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4C00F89D13672B10003683A5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4C00F89E13672B27003683A5 /* libqrencode.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		16AA5C440A7EEE7300888E31 /* QCQREncoder_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QCQREncoder_Prefix.pch; sourceTree = "<group>"; };
 		16BA95400A7EB2EB001E4983 /* QCQREncoderPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QCQREncoderPlugIn.h; sourceTree = "<group>"; };
 		16BA95410A7EB2EB001E4983 /* QCQREncoderPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QCQREncoderPlugIn.m; sourceTree = "<group>"; };
 		16BA96300A7EB9AC001E4983 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
+		4C00F89B13672AF7003683A5 /* libqrencode.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libqrencode.3.dylib; path = ../../../../opt/local/lib/libqrencode.3.dylib; sourceTree = "<group>"; };
 		4C8D845A129784BC00714CDF /* libqrencode.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libqrencode.dylib; path = /opt/local/lib/libqrencode.dylib; sourceTree = "<absolute>"; };
 		4C8D84691297870400714CDF /* QRImageOutputProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRImageOutputProvider.h; sourceTree = "<group>"; };
 		4C8D846A1297870400714CDF /* QRImageOutputProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRImageOutputProvider.m; sourceTree = "<group>"; };
@@ -58,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C00F89C13672AF7003683A5 /* libqrencode.3.dylib in Frameworks */,
 				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
 				16BA96310A7EB9AC001E4983 /* Quartz.framework in Frameworks */,
 			);
@@ -69,6 +86,7 @@
 		089C166AFE841209C02AAC07 /* Quartz Composer Plug In */ = {
 			isa = PBXGroup;
 			children = (
+				4C00F89B13672AF7003683A5 /* libqrencode.3.dylib */,
 				4CB62261129CB44D00EC859E /* Documentation */,
 				08FB77AFFE84173DC02AAC07 /* Classes */,
 				32C88E010371C26100C91783 /* Other Sources */,
@@ -142,6 +160,7 @@
 			buildPhases = (
 				8D5B49B1048680CD000E48DA /* Sources */,
 				8D5B49B3048680CD000E48DA /* Frameworks */,
+				4C00F89D13672B10003683A5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -267,7 +286,10 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /opt/local/include;
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lqrencode";
 				SDKROOT = macosx10.6;
 			};
 			name = Debug;
@@ -279,7 +301,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "/opt/local/include/**";
+				HEADER_SEARCH_PATHS = /opt/local/include;
 				LIBRARY_SEARCH_PATHS = /opt/local/lib;
 				OTHER_LDFLAGS = "-lqrencode";
 				SDKROOT = macosx10.6;
@@ -290,14 +312,21 @@
 		233E2D8A0A83C7AC005A62DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /opt/local/include/;
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
+				OTHER_LDFLAGS = "-lqrencode";
 				PRODUCT_NAME = "Build & Install";
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
 		};
 		233E2D8B0A83C7AC005A62DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /opt/local/include/;
+				OTHER_LDFLAGS = "-lqrencode";
 				PRODUCT_NAME = "Build & Install";
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
 		};
