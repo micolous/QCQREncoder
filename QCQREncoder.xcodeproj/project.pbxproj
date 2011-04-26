@@ -60,11 +60,12 @@
 		16BA95410A7EB2EB001E4983 /* QCQREncoderPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QCQREncoderPlugIn.m; sourceTree = "<group>"; };
 		16BA96300A7EB9AC001E4983 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
 		4C00F89B13672AF7003683A5 /* libqrencode.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libqrencode.3.dylib; path = ../../../../opt/local/lib/libqrencode.3.dylib; sourceTree = "<group>"; };
+		4C00F89F13672E90003683A5 /* LICENSE-libqrencode */ = {isa = PBXFileReference; lastKnownFileType = text; path = "LICENSE-libqrencode"; sourceTree = "<group>"; };
 		4C8D845A129784BC00714CDF /* libqrencode.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libqrencode.dylib; path = /opt/local/lib/libqrencode.dylib; sourceTree = "<absolute>"; };
 		4C8D84691297870400714CDF /* QRImageOutputProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRImageOutputProvider.h; sourceTree = "<group>"; };
 		4C8D846A1297870400714CDF /* QRImageOutputProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRImageOutputProvider.m; sourceTree = "<group>"; };
 		4CB6225F129CB44200EC859E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		4CB62262129CB46600EC859E /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; wrapsLines = 1; };
+		4CB62262129CB46600EC859E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; path = README.md; sourceTree = "<group>"; wrapsLines = 1; };
 		8D5B49B6048680CD000E48DA /* QCQREncoder.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QCQREncoder.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,8 +146,9 @@
 		4CB62261129CB44D00EC859E /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				4C00F89F13672E90003683A5 /* LICENSE-libqrencode */,
 				4CB6225F129CB44200EC859E /* LICENSE */,
-				4CB62262129CB46600EC859E /* README */,
+				4CB62262129CB46600EC859E /* README.md */,
 			);
 			name = Documentation;
 			sourceTree = "<group>";
