@@ -24,8 +24,8 @@
 /* Begin PBXBuildFile section */
 		16BA95420A7EB2EB001E4983 /* QCQREncoderPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 16BA95410A7EB2EB001E4983 /* QCQREncoderPlugIn.m */; };
 		16BA96310A7EB9AC001E4983 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BA96300A7EB9AC001E4983 /* Quartz.framework */; };
-		4C00F89C13672AF7003683A5 /* libqrencode.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C00F89B13672AF7003683A5 /* libqrencode.3.dylib */; };
-		4C00F89E13672B27003683A5 /* libqrencode.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4C8D845A129784BC00714CDF /* libqrencode.dylib */; };
+		4C00F89C13672AF7003683A5 /* libqrencode.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C00F89B13672AF7003683A5 /* libqrencode.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
+		4C08B2601867090A00CE5333 /* libqrencode.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4C00F89B13672AF7003683A5 /* libqrencode.dylib */; };
 		4C8D84941297B34300714CDF /* QRImageOutputProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D846A1297870400714CDF /* QRImageOutputProvider.m */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -41,13 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4C00F89D13672B10003683A5 /* CopyFiles */ = {
+		4C08B25F186708F500CE5333 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4C00F89E13672B27003683A5 /* libqrencode.dylib in CopyFiles */,
+				4C08B2601867090A00CE5333 /* libqrencode.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,9 +59,9 @@
 		16BA95400A7EB2EB001E4983 /* QCQREncoderPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QCQREncoderPlugIn.h; sourceTree = "<group>"; };
 		16BA95410A7EB2EB001E4983 /* QCQREncoderPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QCQREncoderPlugIn.m; sourceTree = "<group>"; };
 		16BA96300A7EB9AC001E4983 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
-		4C00F89B13672AF7003683A5 /* libqrencode.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libqrencode.3.dylib; path = ../../../../opt/local/lib/libqrencode.3.dylib; sourceTree = "<group>"; };
+		4C00F89B13672AF7003683A5 /* libqrencode.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libqrencode.dylib; sourceTree = SOURCE_ROOT; };
 		4C00F89F13672E90003683A5 /* LICENSE-libqrencode */ = {isa = PBXFileReference; lastKnownFileType = text; path = "LICENSE-libqrencode"; sourceTree = "<group>"; };
-		4C8D845A129784BC00714CDF /* libqrencode.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libqrencode.dylib; path = /opt/local/lib/libqrencode.dylib; sourceTree = "<absolute>"; };
+		4C8D845A129784BC00714CDF /* libqrencode.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libqrencode.dylib; sourceTree = SOURCE_ROOT; };
 		4C8D84691297870400714CDF /* QRImageOutputProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRImageOutputProvider.h; sourceTree = "<group>"; };
 		4C8D846A1297870400714CDF /* QRImageOutputProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRImageOutputProvider.m; sourceTree = "<group>"; };
 		4CB6225F129CB44200EC859E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C00F89C13672AF7003683A5 /* libqrencode.3.dylib in Frameworks */,
+				4C00F89C13672AF7003683A5 /* libqrencode.dylib in Frameworks */,
 				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
 				16BA96310A7EB9AC001E4983 /* Quartz.framework in Frameworks */,
 			);
@@ -87,7 +87,7 @@
 		089C166AFE841209C02AAC07 /* Quartz Composer Plug In */ = {
 			isa = PBXGroup;
 			children = (
-				4C00F89B13672AF7003683A5 /* libqrencode.3.dylib */,
+				4C00F89B13672AF7003683A5 /* libqrencode.dylib */,
 				4CB62261129CB44D00EC859E /* Documentation */,
 				08FB77AFFE84173DC02AAC07 /* Classes */,
 				32C88E010371C26100C91783 /* Other Sources */,
@@ -161,8 +161,9 @@
 			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "QCQREncoder" */;
 			buildPhases = (
 				8D5B49B1048680CD000E48DA /* Sources */,
+				4C5310731867010D007F7DD5 /* ShellScript */,
 				8D5B49B3048680CD000E48DA /* Frameworks */,
-				4C00F89D13672B10003683A5 /* CopyFiles */,
+				4C08B25F186708F500CE5333 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -216,6 +217,21 @@
 			shellPath = /bin/sh;
 			shellScript = "# This shell script simply copies the built plug-in to \"~/Library/Graphics/Quartz Composer Plug-Ins\" and overrides any previous version at that location\n\nmkdir -p \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins\"\nrm -rf \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins/QCQREncoder.plugin\"\ncp -rf \"$BUILT_PRODUCTS_DIR/QCQREncoder.plugin\" \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins/\"\n";
 		};
+		4C5310731867010D007F7DD5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				/opt/local/lib/libqrencode.dylib,
+			);
+			outputPaths = (
+				"$(SRCROOT)/libqrencode.dylib",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp /opt/local/lib/libqrencode.dylib \"$SRCROOT/libqrencode.dylib\"\ninstall_name_tool -id \"@loader_path/../Frameworks/libqrencode.dylib\" \"$SRCROOT/libqrencode.dylib\"";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -252,10 +268,8 @@
 				GCC_PREFIX_HEADER = QCQREncoder_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/opt/local/lib,
-				);
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = $SRCROOT;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = QCQREncoder;
 				SDKROOT = macosx;
@@ -274,10 +288,8 @@
 				GCC_PREFIX_HEADER = QCQREncoder_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/opt/local/lib,
-				);
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = $SRCROOT;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = QCQREncoder;
 				SDKROOT = macosx;
@@ -319,9 +331,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = /opt/local/include/;
-				LIBRARY_SEARCH_PATHS = /opt/local/lib;
-				OTHER_LDFLAGS = "-lqrencode";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "Build & Install";
+				SDKROOT = macosx;
 				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
@@ -330,8 +344,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = /opt/local/include/;
-				OTHER_LDFLAGS = "-lqrencode";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "Build & Install";
+				SDKROOT = macosx;
 				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
