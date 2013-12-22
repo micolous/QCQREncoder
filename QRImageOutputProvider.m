@@ -70,7 +70,7 @@
 		// so that's what "rowBytes" is, it's the "actual" width of the texture.
 		//
 		// whereas libqrencode gives us the data tightly packed to the "actual" size of the image, and only the least
-		// significant bit will contain image data (and it's inversed!)
+		// significant bit will contain image data
 		//
 		// so we need to translate that when copying the image across, it's not a simple memcpy operation anymore.
 		
@@ -79,7 +79,7 @@
 		for (unsigned long y = bounds.origin.y; y < bounds.size.height; y++) {
 			offset = (y - (unsigned long)bounds.origin.y) * rowBytes;
 			for (unsigned long x = bounds.origin.x; x < bounds.size.width; x++) {
-				((char*)baseAddress)[offset + (x - (unsigned long)bounds.origin.x)] = !(_qrImage->data[(y * _qrImage->width) + x] & 1) * 0xFF;
+				((char*)baseAddress)[offset + (x - (unsigned long)bounds.origin.x)] = (_qrImage->data[(y * _qrImage->width) + x] & 1) * 0xFF;
 
 			}
 		}
