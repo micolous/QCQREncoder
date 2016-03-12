@@ -27,7 +27,6 @@
 {
 	// if the qr code input is NULL, fail out.
 	if (!qr) {
-		[self release];
 		return nil;
 	}
 		
@@ -41,7 +40,6 @@
 - (void) dealloc
 {
 	QRcode_free(_qrImage);
-	[super dealloc];
 }
 
 - (NSRect) imageBounds

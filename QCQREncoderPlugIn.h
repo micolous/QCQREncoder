@@ -35,8 +35,8 @@ You can access their values in the appropriate plug-in methods using self.inputF
 */
 
 @property(assign) NSUInteger inputErrorCorrectionLevel;
-@property(assign) NSString* inputText;
-@property(assign) id<QCPlugInOutputImageProvider> outputImage;
+@property(strong) NSString* inputText;
+@property(strong) id<QCPlugInOutputImageProvider> outputImage;
 
 
 @end

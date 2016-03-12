@@ -6,20 +6,20 @@
 	<string>English</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleGetInfoString</key>
+	<string>QCQREncoder version 1.0, Copyright Michael Farrell.</string>
 	<key>CFBundleIdentifier</key>
-	<string>au.id.micolous.${PRODUCT_NAME:identifier}</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
-	<key>CFBundleGetInfoString</key>
-	<string>QCQREncoder version 1.0, Copyright Michael Farrell.</string>
-	<key>CFBundleVersion</key>
-	<string>1.0</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.1</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
 	<key>QCPlugInClasses</key>
 	<array>
 		<string>QCQREncoderPlugIn</string>
