@@ -106,23 +106,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	return self;
 }
 
-- (void) finalize
-{
-	/*
-	Release any non garbage collected resources created in -init.
-	*/
-	
-	[super finalize];
-}
 
-- (void) dealloc
-{
-	/*
-	Release any resources created in -init.
-	*/
-	
-	[super dealloc];
-}
 
 @end
 
