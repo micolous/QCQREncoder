@@ -1,0 +1,18 @@
+language: objective-c
+
+notifications:
+  email: false
+
+osx_image: xcode7.2
+xcode_project: QCQREncoder.xcodeproj
+xcode_scheme: Build & Copy
+xcode_sdk: macosx10.11
+
+before_install:
+- |
+  brew update > /dev/null
+  brew install qrencode
+  # Because this uses Homebrew, we need to put things in the place they would be
+  # if we were using Macports.
+  sudo ln -s /usr/local/ /opt/local
+
