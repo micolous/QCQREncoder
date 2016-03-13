@@ -2,7 +2,11 @@
 
 A Quartz Composer patch that encodes QR codes using libqrencode.
 
-Copyright 2010, 2013 Michael Farrell.  <http://micolous.id.au/>
+Copyright 2010, 2013, 2016 Michael Farrell.  <http://micolous.id.au/>
+
+[![Build Status](https://travis-ci.org/micolous/QCQREncoder.svg?branch=master)](https://travis-ci.org/micolous/QCQREncoder)
+
+Version: 1.1
 
 ## License ##
 
