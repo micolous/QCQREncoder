@@ -230,7 +230,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp /opt/local/lib/libqrencode.dylib \"$SRCROOT/libqrencode.dylib\"\ninstall_name_tool -id \"@loader_path/../Frameworks/libqrencode.dylib\" \"$SRCROOT/libqrencode.dylib\"";
+			shellScript = "cp /opt/local/lib/libqrencode.dylib \"$SRCROOT/libqrencode.dylib\"\n\n# Homebrew will write-protect the file\nchmod 644 \"$SRCROOT/libqrencode.dylib\"\n\n# Fix up linking problems.\ninstall_name_tool -id \"@loader_path/../Frameworks/libqrencode.dylib\" \"$SRCROOT/libqrencode.dylib\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
